@@ -1,0 +1,1513 @@
+/*---------------------HOJA DE ESTILOS PERSONALIZADA-----------------/
+
+
+
+1. ESTILOS BASE Y CONFIGURACIONES PLANTILLA
+
+    1.1. ESTILOS BASE
+
+2. HEADER
+
+    2.1. LOGOTIPO
+    2.2. MENÚ
+    2.3. HERO SECTION
+
+3. GRIDS
+
+    3.1. GRID PRINCIPAL
+    3.2. GRID NOTICIAS
+
+4. SECCIÓN ROSA
+
+5. RESPONSIVE
+
+6. FORMATOS Y TEXTOS
+
+7. BOTONES
+
+8. FOOTER
+
+9. VIDEO MODAL
+
+/------------------------------------------------------------------*/
+
+/*------------------- 1. ESTILOS BASE Y PERSONALIZACIONES -----------*/
+
+/*------------------- 1.1 ESTILOS BASE -------------------------------*/
+
+/* Color general del body de la web */
+
+.body-section {
+    background-color: white;
+}
+
+/* Hack para poner el header transparente, basicamente lo estas eliminando */
+
+header {
+    height: 0px;
+}
+
+/* Haciendo que el scroll de HTML sea más suave */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Cambiando el color cuando seleccionas texto */
+
+::-moz-selection {
+    color: white;
+    background: lightcoral; 
+}
+
+::selection {
+    color: white;
+    background: lightcoral; 
+}
+
+/* Creando un custombar personalizado */
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: #032b40;
+}
+
+/* Cursor personalizado */
+
+.cursor {
+    cursor: url('../img/totoro.png'), auto; 
+}
+
+.cursor-alt {
+    cursor: url('../img/totoro-alt.png'), auto; 
+}
+
+/*------------------- 1.2 CONFIGURACIONES PLANTILLA ------------------*/
+
+/* Eliminar margenes header */
+
+.header-section .placefiller {
+	text-align: center;
+	font-size: 20px;
+	border: 1px solid transparent;
+}
+
+/*------------------- 2. HEADER --------------------------------------*/
+
+/*------------------- 2.1. LOGOTIPO -----------------------------------*/
+
+/* Formato logo version desktop */
+
+header .logo img {
+	text-align: left;
+	padding-left: 20px;
+    padding-top: 20px;
+}
+
+/*------------------- 2.1. MENÚ ---------------------------------------*/
+
+/* Formato enlaces menu */
+
+.enlacemenu {
+    font-family: 'Varela Round', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 1.29em;
+    padding-right: 0.9em;
+    text-transform: uppercase;
+}
+
+/* Color enlace menú activo*/
+
+.active-desktop {
+    color: lightcoral;
+}
+
+/* Margen personalizado para el menú en formato desktop */
+
+nav.slide {
+    line-height: 50px;
+}
+
+/* Hover para elementos del menú */
+
+nav li .enlacemenu:hover {
+    color: lightcoral;
+}
+
+/* Cursor SVG Header */
+
+.mousescroll {
+    position:absolute; 
+    top:460px;
+    left:50%;
+    width:50px;
+    margin-left:-20px;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateY(0);
+}
+	30% {
+		transform: translateY(60px);
+}
+}
+
+svg #wheel{
+	animation: scroll ease 2s infinite;
+}
+
+/* Clase para centrar textos horizontalmente */
+
+.centrar {
+    text-align: center;
+}
+
+/* Fondo alternativo para enciclopedia */
+
+.body-section .seccion-alt {
+    margin: -20px;
+    padding: 80px 20px 30px 20px;
+    background-color: #f4f4f4;
+}
+
+/* Margen secciones fondo blanco */
+
+.body-section .seccion-blanco-enciclopedia {
+    padding-top: 80px;
+}
+
+.ver-mas-bloque p {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+    color: #032b40;
+    
+}
+
+div .ver-mas-bloque {
+    padding-top: 20px;
+}
+
+#letra-b {
+    padding-bottom: 40px;
+}
+
+/*------------------- 2.2 HERO SECTION --------------------------------*/
+
+/* Fondo con overlay Hero Section */
+
+.header-section {
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.33),rgba(58, 57, 57, 0.47)), url(../img/backgrounds/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+/* Fondo ALT Enciclopedia */
+
+.fondo-enciclopedia {
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.33),rgba(58, 57, 57, 0.47)), url(../img/backgrounds/bg-enciclopedia.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+/* Fondo Blog */
+
+.fondo-blog {
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.33),rgba(58, 57, 57, 0.47)), url(../img/backgrounds/bg-blog.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+/* Fondo Ficha anime Ej: Tokyo Ghoul */
+
+.fondo-ficha-anime {
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.33),rgba(58, 57, 57, 0.47)), url(../img/backgrounds/ficha-anime-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+/* Fondo Política de cookies */
+
+.fondo-cookies {
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.33),rgba(58, 57, 57, 0.47)), url(../img/backgrounds/cookies-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+/* Fondo paginas legales */
+
+.fondo-legal {
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.33),rgba(58, 57, 57, 0.47)), url(../img/backgrounds/aviso-legal-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+/* Fondo manga */
+
+.fondo-manga {
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.33),rgba(58, 57, 57, 0.47)), url(../img/backgrounds/manga-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+/* Fondo japon */
+
+.fondo-japon {
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.33),rgba(58, 57, 57, 0.47)), url(../img/backgrounds/japon-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+/* Fondo cosplay */
+
+.fondo-cosplay {
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.33),rgba(58, 57, 57, 0.47)), url(../img/backgrounds/cosplay-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+/* Cambio altura hero slider */
+
+.header-section .placefiller {
+    line-height: 500px;
+}
+
+.texto-destacado-categoria {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 36px !important;
+}
+/*------------------- 3. GRID -------------------------------*/
+
+.centrar-boton {
+    text-align: center;
+}
+
+.centrar-boton button {
+    margin-top: 30px
+}
+
+.centrar-boton p strong {
+    font-weight: 500;
+}
+
+/*------------------- 3.1 GRID PRINCIPAL ---------------------*/
+
+/* Grid de trabajo, establecemos el ancho máximo de pantalla y los márgenes */
+
+.grid {
+    max-width: 1280px;
+    margin: 0 auto 0px;
+    padding-bottom: 30px;
+    
+}
+
+/* Configuracion de el layout que tendra el grid, utilizando CSS Grid */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+/*Posicionamiento del article en relative para poder trabajar el contenido interno */
+
+article {
+    position: relative;
+}
+
+/* Estilos de la imagen del grid*/
+
+.article-img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Estilos seccion titular del grid*/
+
+.article-title {
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    padding: 10px 0 22px 0;
+    background-color: rgba(29, 29, 29, 0.43);
+    background-size: cover;
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+    font-size: 2.32em;
+    overflow: hidden;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-bottom: 2px;
+}
+
+.border-radius {
+    border-radius: 26px;
+}
+
+.padding-titular {
+    padding: 0 0 0 15px;
+}
+
+/*------------------- 3.2. GRID NOTICIAS ---------------------*/
+
+/* Creamos el formato del grid para las noticias de texto */
+
+.cards-enlaces {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-gap: 20px;
+}
+
+/* Formato enlaces menu noticias */
+
+.menu-noticias {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 19px;
+    color: #232323;
+}
+
+.menu-noticias::after {
+    color: #ba007c;
+    content: " →"
+}
+
+.menu-noticias:hover {
+    font-weight: 700;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 19px;
+
+}
+
+/* Hover completo para cards */
+
+a article.hover:hover .article-title {
+    position: absolute;
+    background-color: rgba(29, 29, 29, 0.58);
+    bottom: 1px;
+    top: 0;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    transition: opacity 500ms ease-out;
+    -webkit-transition: opacity 500ms ease-out;
+    -moz-transition: opacity 500ms ease-out;
+    -o-transition: opacity 500ms ease-out;
+}
+
+/* Titular card en hover */
+
+div.article-title.posicion-articulo:hover .otro-texto {
+    display: block;
+    padding: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    
+}
+
+/*Grid buscador enciclopedia */
+
+.seccion-buscador-enciclopedia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 10px 0 0 0;
+    padding: 25px 15px 25px;
+    background-color: #f5f5f7;
+    border-radius: 25px;
+}
+
+/*------------------- 3.3. GRID FLEXBOX ---------------------*/
+
+/* Configuración del grid flexbox para mostrar texto y boton */
+
+.grid-rosa-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/*------------------- 4. SECCIÓN ROSA ---------------------*/
+
+.body-section .seccion-rosa {
+    margin: -20px;
+    background-color: #f08678;
+}
+
+.seccion-rosa {   
+    background-color: #f08678;
+}
+
+/* Sección con el fondo rosa */
+
+.colour-block {
+    background: #f08678;
+    max-width: 1280px;
+    margin: 0 auto ;
+    padding: 60px 20px 20px 20px
+}
+
+/* Sección con el fondo blanco */
+
+}
+
+.white-block {
+    background: #fff;
+    width: 60%;
+    padding: 7% 20% 10% 20%;
+}
+
+/* Separador inferior */
+
+.skew-cc {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    left: 0px;
+    background: linear-gradient(to right bottom, #f08678 49%, #fff 50%),    linear-gradient(-50deg, #ffffff 16px, #000 0);
+}
+
+/* Separador superior */
+
+.skew-c {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    left: 0px;
+    background: linear-gradient(to left bottom, #fff 49%, #f08678 50%);
+}
+
+/* Margen para titular inferior seccion rosa */
+
+.margen-titular-bottom-rosa {
+    margin-top: 100px;
+}
+
+/* Separador menú enlaces */
+
+.line-separator {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 1px;
+    background: #032b40;
+    border-bottom: 1px solid #032b40;
+}
+
+/* Estilos titular sección */
+
+.titular-enciclopedia {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: #032b40;;
+    font-size: 4.29em;
+    padding-right: 0.9em;
+    font-weight: 700;
+    font-style: italic;
+    padding-bottom: 30px;
+    margin-top: -70px;
+}
+
+.titular-enciclopedia span{
+    font-family: 'Open Sans', sans-serif;
+    color: lightcoral;
+}
+.titular {
+    font-family: 'Varela Round', sans-serif;
+    text-decoration: none;
+    color: #383838;
+    font-size: 4.29em;
+    padding-right: 0.9em;
+}
+
+div h2 {
+    padding: 50px 0 1px 0;
+    margin: 0 0 0 -5px
+}
+
+.subtitulo {
+    font-family: 'Open Sans', sans-serif;
+    color: lightcoral;
+    font-size: 1.69em;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Espacios personalizado para grids */
+
+.espacio-base {
+    padding: 40px;
+}
+
+.espacio-1 {
+    line-height: 30px;
+}
+
+.espacio-05 {
+    line-height: 30px;
+}
+
+.espacio-2 {
+    line-height: 80px;
+}
+
+.espacio-3 {
+    margin-top: 80px;
+}
+
+/*-------------- 5. RESPONSIVE ------------------ */
+
+@media only screen and (max-width: 847px) {
+    
+header {
+	height: 70px;
+	background-color: #032b40;
+}
+    
+nav.slide {
+    line-height: 26px;
+}
+    
+header .logo img {
+    margin-top: -22px;
+    max-width: 160px;
+}
+    
+.enlacemenu {
+    color: white;
+}
+    
+nav li a.active {
+	background-color: #084c6d;
+}
+    
+nav {
+	background-color: #032b40;
+}
+    
+nav li a:hover {
+	background-color: #084c6d;
+    color: white;
+}
+.nav-alt {
+    color: white !important;     
+}
+    
+.nav-alt:hover {
+    color: lightcoral !important;     
+}
+    
+div.grid-rosa-flex {
+    display: inline-block;
+}
+    
+div.grid-rosa-flex button {
+    margin: 20px 0 0 0;
+}
+    
+.boton-enciclopedia-home {
+    width: 70% !important; 
+    font-size: 18px !important;
+}
+    
+.buscador-enciclopedia::placeholder {
+    padding: 10px;
+    font-size: 14px
+}
+    
+.centrar {
+    padding: 0px 20px 0px
+}
+    
+div.grid-error-404 {
+    display: block;
+    padding: 20px;
+}
+
+.grid-error-404 img {
+    display:block;
+    margin: 0 auto; 
+    max-width: 80px;
+}
+    
+.titular-404 {
+    font-size: 28px;
+}
+    
+.texto-404 {
+    font-size: 18px;
+    padding: 10px 0 5px ;
+}
+
+.grid-error-404 {
+    padding-top: 10px;
+    margin-top: 20px;
+} 
+    
+.error-404 .grid {
+    margin: -50px auto 30px;
+}
+.error-corporativo {
+    padding: 10px 0 0 !important;
+}
+.texto-destacado-categoria {
+    font-size: 23px !important;    
+}
+    
+.grid-flex-listado {
+    display: block !important;
+}
+    
+.grid-enlaces-listado {
+    display: block !important;
+    text-align: center;
+}
+.grid-pagina-actual {
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: center !important;
+}
+.footer-legal{
+    justify-content: flex-start !important;
+    padding: 0 0 10px 23px !important;
+}
+.error-corporativo .footer-legal{
+    justify-content: center !important;
+}
+}
+
+@media only screen and (max-width: 400px) {
+ 
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 30px;
+}
+    
+.titular-buscar-home {
+    font-family: 'Varela Round', sans-serif;
+    color: black;
+    font-size: 20px;
+}
+    
+.titular-buscar-home span {
+    font-family: 'Open Sans', sans-serif;
+    color: #032b40;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+}
+    
+.titular {
+    font-size: 3.29em;
+}
+.titular-404 {
+    padding: 10px;
+    font-size: 28px;
+}
+    
+.texto-404 {
+    padding: 5px 0 5px !important;
+}
+    
+.error-corporativo img { 
+    display: none;
+}
+div.grid-error-404 {
+    display: block;
+    padding: 5px;
+}
+.texto-destacado-categoria {
+    font-size: 21px !important;    
+    }
+}      
+    
+/*----- 6. FORMATOS Y TEXTOS ------*/
+
+/* Enlace menú hover */
+
+.enlace-hover {
+    font-weight: 700;
+    font-style: italic;
+    line-height: 40px;
+    margin-top: 40px;
+    color: white;
+}
+
+.enlace-hover::after {
+    color: lightcoral;
+    content: " →"
+}
+
+.titular-buscar-home {
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+    font-size: 3.2em;
+}
+
+.titular-buscar-home span {
+    font-family: 'Open Sans', sans-serif;
+    color: #032b40;
+    font-size: 0.9em;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.noticias-seccion-rosa {
+    margin: 10px 0 0 0;
+    padding: 0 15px 25px;
+    background-color: #ffffffd1;
+    border-radius: 25px;
+}
+
+.titular-mas-noticias {
+    font-family: 'Varela Round', sans-serif;
+    color: #032b40;
+    font-size: 3.2em   
+}
+
+/* Texto contenedor de la info del hover */
+
+.otro-texto {
+    display: none;
+}
+
+/*----- 7. BOTONES ------*/
+
+
+/* Formato del botón principal home */
+
+.boton-enciclopedia-home {
+    background-color: #032b40;
+    border-radius: 20px;
+    width: 350px;
+    line-height: 25px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+    font-style: italic;
+    padding: 10px 7px 10px 7px;
+    position: relative;
+    margin: 10px;
+}
+
+/* Formato del botón para el grid de noticias */
+
+.boton-grid {	
+    background-color: #032b40;
+    border-radius: 20px;
+    width: 100%;
+    line-height: 25px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+    font-style: italic;
+    padding: 10px 7px 10px 7px 
+}
+
+/* Hover botón puntos */
+
+:before, .boton-efecto-puntos {
+	color: #fff;
+	background: #032b40;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+
+.boton-efecto-puntos:active {
+	top: 2px;
+}
+
+.boton-efecto-puntos {
+	border: 2px dashed #032b40;
+	border-radius: 60px;
+}
+
+.boton-efecto-puntos:hover {
+	background: transparent;
+	color: #032b40;
+}
+
+.boton-fullwidth {
+    width: 100%;
+    line-height: 25px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+    font-style: italic;
+    padding: 10px 7px 10px 7px;
+}
+
+.boton-ver-mas-videos {
+    padding: 0 20px 0;
+}
+
+/* ------ 8. FOOTER ------ */
+
+.footer-section {
+    padding: 0;
+    background-color: white;    
+}
+
+.footer-legal {
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 15px 0
+}
+
+.footer-legal a {
+    padding: 0 0px 0 0;
+    font-family: 'Varela Round';
+    font-size: 18px;
+    color: white;
+}
+
+.footer-legal a:hover {
+    color: #1f2d3d;
+}
+
+.footer-legal span {
+    padding: 0 10px;
+    color: #1f2d3d;
+    font-size: 22px;
+}
+.error-corporativo .footer-legal a {
+     color: #1f2d3d;
+}
+
+.error-corporativo .footer-legal a:hover {
+     color: lightcoral;
+}
+
+.body-section .beige {
+    background-color: #fff8f7;
+    margin: -20px;
+}
+
+.footer-alt .skew-c {
+    background: linear-gradient(to left bottom, #fff8f7 49%, #f1cec9 50%);
+    margin: -30px 0px 0px;
+    padding-bottom: 20px;
+    
+}
+
+.footer-alt .seccion-rosa, .footer-alt .colour-block {
+    background: #f1cec9;
+}
+
+.abecedario-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+    grid-gap: 30px;
+    padding: 20px 20px 30px;
+    justify-content: center;
+}
+
+.lista-abecedario h4 {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 22px;
+    padding: 20px 0px 30px;
+    color: #032b40;  
+}
+
+.lista-abecedario h4 span {
+    padding: 0px 0px 0 10px;
+    color: lightcoral;
+}
+
+.lista-abecedario ul {
+    position: relative;
+	list-style: none;
+	margin-left: 0;
+	padding-left: 1.2em;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    padding: 0 0 0 20px;
+    line-height: 35px;   
+}
+
+.lista-abecedario ul li:before {
+    background: transparent;
+    color: lightcoral;
+	content: "#";
+	position: absolute;
+	left: 0;
+    font-weight: 700;
+    margin-left: 3px;
+}
+
+.lista-abecedario a {
+    color: #032b40;
+}
+
+/************************************************** SECCIÓN BUSCADOR **************************************/
+
+.buscador-enciclopedia {
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+    height: 50px;
+}
+        
+.buscador-enciclopedia::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #cd0065;
+    opacity: 1; /* Firefox */
+}
+
+.buscador-enciclopedia:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ba007c;
+}
+
+.buscador-enciclopedia::-ms-input-placeholder { /* Microsoft Edge */
+    color: #cd0065;
+}   
+input::placeholder {  
+    text-align: center; 
+} 
+/* Formato escritura buscador */
+
+.buscador-enciclopedia:read-write {
+    text-align: center;
+    color: #032b40;
+}
+
+/*------------------- 10. ERROR 404 -----------*/
+
+.error-404 .body-section, body.error-404 {
+    background: #e9e9e9;
+}
+
+.grid-error-404 {
+    margin: 10vh 0 0 0;
+    padding: 50px 100px 50px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    justify-content: flex-start
+}
+
+.informacion-404 {
+    padding: 0 0 0 50px;
+}
+
+.titular-404 {
+    color: #495454;
+}
+
+.texto-404 {
+    color: #495454;
+    padding: 13px 0 30px;;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+}
+
+.texto-404 strong {
+    font-weight: 500;
+}
+
+.boton-enciclopedia-home.boton-error-404 {
+    background: #495454;
+    border: solid;
+}
+
+.boton-enciclopedia-home.boton-error-404:hover {
+    background: lightcoral;
+    border: none;
+    color: white;
+}
+
+.error-corporativo {
+    padding: 45px 0 0;
+    text-align: center;
+}
+
+.texto-error-corporativo {
+    color: #454545;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+
+.fondo-general-blanco {
+    background: white;
+}
+
+/*------------------- 10. MENÚ CATEGORIAS NOTICIAS -----------*/
+
+.menu-categorias-blog {
+    background: #ffe6d8;
+    padding: 20px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 24px;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.item-menu-categorias {
+    color: #1f2d3d;
+    padding: 0 10px;
+}
+
+.color-categoria-anime-active {
+    color: #ba007c;
+}
+
+.color-categoria-anime:hover {
+    color: #ba007c;
+}
+
+.color-categoria-manga-active {
+    color: #1454e5;
+}
+
+.color-categoria-manga:hover {
+    color: #1454e5;
+}
+
+.color-categoria-japon-active {
+    color: #e51459;
+}
+
+.color-categoria-japon:hover {
+    color: #e51459;
+}
+
+.color-categoria-cosplay-active {
+    color: #e52c14;
+}
+
+.color-categoria-cosplay:hover {
+    color: #e52c14;
+}
+
+.color-background-indicador-anime {
+    background: #ba007c;
+}
+
+.color-background-indicador-manga {
+    background: #1454e5;
+}
+
+
+.color-background-indicador-japon {
+    background: #e51459;
+}
+
+.color-background-indicador-cosplay {
+    background: #e52c14;
+}
+
+
+/*------------------- 10. BLOG SINGLE -----------*/
+
+/* Formato grid blog single */
+
+.contenido-blog {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows:  repeat(2, minmax(auto, auto));
+    grid-gap: 2em;
+}
+
+.contenido-articulo {
+    grid-column: 1 / span 3;
+}
+
+.sidebar-blog {
+    grid-column: span 1;
+}
+
+@media (max-width: 900px) {
+  
+.contenido-articulo, .sidebar-blog {
+    grid-column: 1 / span 5;
+}
+.menu-categorias-blog {
+        display: block !important;
+}
+}
+
+.sidebar-enciclopedia {
+    border-radius: 25px;
+    padding: 35px 5px;
+}
+
+.sidebar-blog {
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.color-blanco-sidebar {
+    background: white;
+}
+
+.contenido-blog {
+    margin: 40px 0 0;
+}
+
+.indicador-categoria-noticia {
+    width: 4em;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 18px;
+    margin: 0 0 15px;
+}
+
+.titular-noticia {
+    font-family: 'Varela Round', sans-serif;
+    color: #1f2d3d;
+    font-size: 36px;
+}
+
+.fecha-noticia {
+    margin: 20px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: #1f2d3d;
+    font-style: italic;
+}
+
+.imagen-destacada-blog img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+.texto-noticia p {
+    padding: 30px 0;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 30px;
+    color: #1f2d3d;
+}
+
+.texto-noticia p strong {
+    font-family: 'Varela Round', sans-serif;
+    color: lightcoral;
+}
+
+.indicador-noticia-relacionada {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1em;
+    padding: 5px
+}
+
+.titular-noticia-relacionada {
+    font-size: 2.4em;
+    padding: 10px 0;
+    
+}
+
+.descripcion-noticia-relacionada {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #1f2d3d;
+    padding: 0 0 10px;
+}
+
+.margen-grid-blog {
+    margin-top: 30px;
+}
+
+/*------------------- 10. FICHA ANIME -----------*/
+
+.imagen-destacada-ficha-anime img {
+    border-radius: 50px;
+}
+.datos-tecnicos-anime {
+    margin: 25px 0 0;
+    border: 1px solid #032b4063;
+    border-radius: 25px;
+    padding: 20px 10px;
+}
+.youtube {
+    border-radius: 50px;
+    margin-bottom: 30px;
+}
+
+
+
+/*------------------- 10. SECCIÓN LISTADO ALFABETICO -----------*/
+
+.nav-alt {
+    color: #032b40;
+}
+
+div .grid-listado-alfabetico {
+    border-radius: 50px;
+    padding: 30px;
+    margin: 100px 20px 0;
+    background-color: white;    
+}
+.borde-listado{
+    border: 0.004em solid #a9a9a9;
+    margin: 20px 0;
+}
+.navegacion-listado a{
+    margin: 0 15px 0 0;
+    color: #1f2d3d;
+    font-family: 'Varela round', sans-serif;
+    font-weight: 400;
+    font-size: 14px  
+}
+
+.navegacion-listado a:hover{
+    color: lightcoral;
+    
+}
+
+.navegacion-listado span{
+    margin: 0 15px 0 0
+}
+
+.grid-flex-listado{
+    display: flex;
+    justify-content:  space-between;
+    align-items: flex-end;
+}
+
+.grid-enlaces-listado{
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid-enlaces-listado {
+    display: flex;
+}
+.grid-enlaces-listado ul {
+    padding: 0 15px;   
+}
+
+.grid-enlaces-listado ul li {
+    padding: 15px 0; 
+}
+
+.grid-enlaces-listado li:before {
+    background-color: white;;
+    color: lightcoral;
+    content: '# \0000a0';
+    font-size: 1.9em;
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.grid-enlaces-listado a {
+    color: #1f2d3d;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    
+}
+.grid-enlaces-listado a:hover {
+    border-bottom: 0.009em solid lightcoral;
+}
+
+.grid-pagina-actual {
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.grid-pagina-actual p {
+    font-family: 'Varela Round', sans-serif;
+    color: #1f2d3d;
+    font-size: 16px;
+    
+}
+.grid-pagina-actual span {
+    color: lightcoral;
+    font-size: bold;
+}
+.titular-listado-alfabetico {
+    font-size: 28px;
+    font-family: 'Open sans';
+    font-weight: 600;
+    font-style: italic;
+    color: #1f2d3d;
+}
+
+.titular-listado-alfabetico span {
+    color: lightcoral;
+}
+/*------------------- 9. VIDEO MODAL -----------*/
+
+.video-modal, .video-modal .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3000;
+}
+
+.video-modal {
+    overflow: hidden;
+    position: fixed;
+    opacity: 0.0;
+    -webkit-transform: translate(500%,0%);
+    transform: translate(500%,0%);
+    -webkit-transition: -webkit-transform 0s linear 0s;
+    transition: transform 0s linear 0s;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.video-modal .overlay {
+    z-index: 0;
+    background: rgba(5, 2, 31, 0.87); /* overlay color */
+    opacity: 0.0;
+    -webkit-transition: opacity 0.2s ease-out 0.05s;
+    transition: opacity 0.2s ease-out 0.05s;
+}
+
+.video-modal-content {
+	position: relative;
+	top: auto;
+	right: auto;
+	bottom: auto;
+	left: auto;
+	z-index: 1;
+	margin: 0 auto;
+	overflow-y: visible;
+	background: #000;
+    width: calc(100% - 12em);
+    height: 0;
+    padding-top: calc((100% - 12em) * 0.5625);
+}
+
+@media (min-aspect-ratio: 16/9) {
+.video-modal-content {
+    width: 0;
+    height: calc(100vh - 10em);
+    padding-top: 0;
+    padding-left: calc((100vh - 10em) * 1.7778);
+}
+}
+
+
+@media (max-width: 640px) {
+.video-modal-content {
+    width: calc(100% - 1em);
+    padding-top: calc((100% - 1em) * 0.5625);
+}
+}
+
+.close-video-modal {
+	display: block;
+    position: absolute;
+    left: 0;
+    top: -40px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+iframe#youtube {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	background: #000;
+	box-shadow: 0px 2px 16px rgba(0,0,0,0.5);
+}
+
+.show-video-modal .video-modal {
+	opacity: 1.0;
+	transform: translate(0%,0%);
+	-webkit-transform: translate(0%,0%);
+}
+
+.show-video-modal .video-modal .overlay {
+	opacity: 1.0;
+}
+
+.show-video-modal .video-modal-content {
+	transform: translate(0%,0%);
+	-webkit-transform: translate(0%,0%);
+}
+
+.cargar-mas-contenido {
+    display: none;
+}
+
+.noContent {
+    display: flex;
+    justify-content: center;
+}
+
+a.noContent {
+    font-family: 'Varela Round';
+    font-size: 20px;
+    color: lightcoral;
+}
+    
